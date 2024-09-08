@@ -16,7 +16,7 @@
 # Инструкция для запуска
 Клонируете репозиторий
 ```
-git clone 
+git clone https://github.com/yankaiova/album.git
 ```
 Перейти в папку с backend и выполнить запуск
 ```
