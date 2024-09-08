@@ -6,6 +6,7 @@ import {
 import { observer } from "mobx-react-lite";
 import { useStores } from "../lib/useStores";
 import { useNavigate, useParams } from "react-router-dom";
+import { BASE_URL_ASSETS } from "../lib/consts";
 
 export const Modal = observer(({ open, setOpen }) => {
   const { gallery } = useStores();
@@ -32,7 +33,7 @@ export const Modal = observer(({ open, setOpen }) => {
             </button>
             <div className="flex items-center justify-center max-w-full max-h-full">
               <img
-                src={`http://127.0.0.1:8055/assets/${gallery.currentImage.url}`}
+                src={BASE_URL_ASSETS + gallery.currentImage.url}
                 alt="Photo"
                 className="max-w-[50vw] max-h-[50vh] object-contain"
               />
