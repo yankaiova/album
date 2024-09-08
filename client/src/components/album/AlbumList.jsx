@@ -1,4 +1,3 @@
-import { IAlbum } from "../../model/types";
 import { useEffect, useState } from "react";
 import { getAlbums } from "../../api";
 import { AlbumItem } from "./AlbumItem";

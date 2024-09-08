@@ -1,4 +1,3 @@
-import { Photo } from "../model/types";
 import { useState } from "react";
 import { useStores } from "../lib/useStores";
 import { Modal } from "./Modal";

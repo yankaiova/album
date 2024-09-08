@@ -1,7 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 import { useStores } from "../../lib/useStores";
-import { IAlbum } from "../../model/types";
 import { useState, useEffect } from "react";
 import { getImagesByAlbum } from "../../api";
 import { BASE_URL_ASSETS } from "../../lib/consts";
@@ -13,13 +12,12 @@ export const AlbumItem = observer(({ album }) => {
       setLength(res.data.length);
     });
   }, []);
-
   const { gallery } = useStores();
   return (
     <div className="group">
       <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
         <img
-          src={BASE_URL_ASSETS + album.url}
+          src={`${BASE_URL_ASSETS}${album.url}`}
           alt={album.title}
           className="h-48 w-full object-cover object-center rounded-lg"
         />

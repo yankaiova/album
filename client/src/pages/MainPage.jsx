@@ -1,6 +1,5 @@
 import { AlbumList } from "../components/album/AlbumList";
 
-const MainPage = () => {
+export const MainPage = () => {
   return <AlbumList />;
 };
-export default MainPage;

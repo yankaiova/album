@@ -8,5 +8,4 @@ class RootStore {
     makeAutoObservable(this);
   }
 }
-
 export const store = new RootStore();
