@@ -1,6 +1,5 @@
 import { makeAutoObservable, runInAction } from "mobx";
-import { getImageById, getImagesByAlbum } from "../../api";
-import { delay } from "../../lib/consts";
+import { getImagesByAlbum } from "../../api";
 
 export class GalleryStore {
   title = "";
@@ -33,28 +32,14 @@ export class GalleryStore {
   loadImages = async (id) => {
     try {
       this.isLoading = true;
-      await delay(1000);
       const data = await getImagesByAlbum(id);
+      console.log(data.data);
       runInAction(() => {
         this.isLoading = false;
         this.currentPage = 1;
         this.images = data.data;
         this.totalImage = this.images.length;
         this.totalPage = Math.ceil(this.totalImage / 8);
-      });
-    } catch {
-      this.isLoading = false;
-    }
-  };
-  loadImageById = async (id) => {
-    try {
-      this.isLoading = true;
-      await delay(1000);
-      const data = await getImageById(id);
-      runInAction(() => {
-        this.isLoading = false;
-        this.currentImage = data.data;
-        this.currentSlide = this.images.indexOf(this.currentImage);
       });
     } catch {
       this.isLoading = false;

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";
 import { useStores } from "../lib/useStores";
 import { useParams } from "react-router-dom";
-import { Image } from "./Image";
 import { Pagination } from "./album/Pagination";
 import { ImageList } from "./ImageList";
 

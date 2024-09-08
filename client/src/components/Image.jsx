@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useStores } from "../lib/useStores";
 import { Modal } from "./Modal";
-import { BASE_URL_ASSETS } from "../lib/consts";
 
 export const Image = ({ photo }) => {
   const [open, setOpen] = useState(false);
@@ -15,7 +14,7 @@ export const Image = ({ photo }) => {
   return (
     <div className="relative">
       <img
-        src={BASE_URL_ASSETS + photo.url}
+        src={"http://127.0.0.1:8055/assets/" + photo.url}
         alt="Фото"
         className="w-full h-auto cursor-pointer object-cover object-center rounded-lg"
         onClick={handleClickPhoto}
