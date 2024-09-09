@@ -29,6 +29,7 @@ cd client
 npm install
 npm run dev
 ```
+Проверить CORS
 Логин для входа в Directus: admin@example.com
 Пароль для входа в Directus: DirectusYanaJ
 # Скрины рабочего приложения
