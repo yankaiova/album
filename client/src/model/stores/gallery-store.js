@@ -1,5 +1,6 @@
 import { makeAutoObservable, runInAction } from "mobx";
 import { getImagesByAlbum } from "../../api";
+const delay = (ms) => new Promise((_) => setTimeout(_, ms));
 
 export class GalleryStore {
   title = "";
@@ -32,6 +33,7 @@ export class GalleryStore {
   loadImages = async (id) => {
     try {
       this.isLoading = true;
+      await delay(1000);
       const data = await getImagesByAlbum(id);
       console.log(data.data);
       runInAction(() => {
