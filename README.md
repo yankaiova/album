@@ -30,6 +30,8 @@ npm install
 npm run dev
 ```
 Проверить CORS
+Админ Backend открывается по http://127.0.0.1:8055/admin/
+Frontend по http://127.0.0.1:8085/
 Логин для входа в Directus: admin@example.com
 Пароль для входа в Directus: DirectusYanaJ
 # Скрины рабочего приложения
